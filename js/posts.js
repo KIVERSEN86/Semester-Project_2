@@ -1,3 +1,4 @@
+import showMessage from "./components/showMessage.js";
 import { createNav } from "./components/createNav.js";
 import { createFooter } from "./components/createFooter.js";
 import { baseUrl } from "./data/baseUrl.js";
@@ -20,6 +21,7 @@ async function displayPosts() {
     createPosts(json);
   } catch (error) {
     console.log(error);
+    showMessage("warning", "Ops! There is a problem with the API", ".message-container");
   }
 }
 displayPosts();

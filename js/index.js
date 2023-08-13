@@ -1,3 +1,4 @@
+import showMessage from "./components/showMessage.js";
 import { createNav } from "./components/createNav.js";
 import { createFooter } from "./components/createFooter.js";
 import { baseUrl } from "./data/baseUrl.js";
@@ -29,7 +30,7 @@ const postsUrl = baseUrl + "articles?populate=image";
                             </div></a>`;
     }
   } catch (error) {
-    console.log(error);
+    showMessage("warning", "Ops! There is a problem with the API", ".message-container");
   }
 })();
 
@@ -41,7 +42,7 @@ function signUp() {
                               <h1 class="card-title h1-frontpage">A wiki for front-end developers, by developers.</h1>
                               <h2 class="card-title">Start your contribution today!</h2>
                               <div class="container__btn-signup">
-                              <a href="#" class="btn btn-cta btn-cta_hover btn-signup">Register here</a>
+                              <a href="about.html" class="btn btn-cta btn-cta_hover btn-signup">Read more</a>
                               </div>
                             </div>
                           </div>`;

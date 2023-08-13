@@ -30,5 +30,6 @@ const url = baseUrl + "abouts" + "?populate=image";
     }
   } catch (error) {
     console.log(error);
+    showMessage("warning", "Ops! There is a problem with the API", ".message-container");
   }
 })();

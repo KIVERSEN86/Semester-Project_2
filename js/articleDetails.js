@@ -33,5 +33,6 @@ const url = baseUrl + "articles/" + id + "?populate=image";
                             </div>`;
   } catch (error) {
     console.log(error);
+    showMessage("warning", "Ops! There is a problem with the API", ".message-container");
   }
 })();

@@ -34,5 +34,6 @@ const url = baseUrl + "posts/" + id;
                             </div>`;
   } catch (error) {
     console.log(error);
+    showMessage("warning", "Ops! There is a problem with the API", ".message-container");
   }
 })();
