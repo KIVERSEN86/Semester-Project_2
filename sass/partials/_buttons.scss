@@ -1,0 +1,28 @@
+.logout-btn {
+  background: #d5a947;
+  color: white;
+  border-radius: 10px;
+
+  &:hover {
+    background: darken($color: #d5a947, $amount: 10);
+    border: 1.5px solid white;
+    color: white;
+  }
+}
+
+.btn-cta {
+  background: #d5a947;
+  color: white;
+
+  &:hover {
+    background: darken($color: #d5a947, $amount: 10);
+    color: white;
+    border: 1.5px solid white;
+    border-radius: 10px;
+    transition: 0.6s;
+  }
+}
+
+.btn-danger {
+  margin-top: 10px;
+}

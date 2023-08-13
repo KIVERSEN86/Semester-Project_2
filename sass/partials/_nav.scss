@@ -1,0 +1,42 @@
+.navbar {
+  background: $primary;
+  min-height: 100px;
+
+  @media (min-width: 1000px) {
+    .nav__btn-container {
+      margin: 0 0 0 30px;
+    }
+  }
+}
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.6rem;
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+.navbar-brand:hover {
+  color: #d5a947;
+}
+
+.nav-active {
+  color: #d5a947;
+}
+
+.nav__btn-container {
+  margin-top: 10px;
+}
+
+span {
+  color: white;
+}

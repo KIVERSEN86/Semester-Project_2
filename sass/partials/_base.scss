@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: #f9f5e5;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0 20px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  height: 200px;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid rgb(28, 213, 255);
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  margin: auto;
+  margin-top: 50px;
+  animation: spin 1s linear infinite alternate;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-book-open {
+  font-size: 2em;
+}
+
+.nav-link:hover,
+.footer__links-a:hover {
+  color: #d5a947;
+}
+
+.media-links i {
+  color: #d5a947;
+}

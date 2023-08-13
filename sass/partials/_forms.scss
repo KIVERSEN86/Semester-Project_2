@@ -1,0 +1,31 @@
+.edit-form {
+  display: none;
+}
+
+.form__container {
+  max-width: 600px;
+}
+
+.error-form {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+
+.message {
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.message.failedLogin,
+.message.warning {
+  background: rgb(230, 83, 83);
+  color: white;
+}
+
+.message.success {
+  background: rgb(12, 159, 132);
+  color: white;
+}

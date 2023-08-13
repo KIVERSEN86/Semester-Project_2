@@ -1,0 +1,71 @@
+.h1-frontpage {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+.container__signup {
+  max-width: 355px;
+  @media (min-width: 500px) {
+    max-width: 430px;
+  }
+  @media (min-width: 850px) {
+    max-width: 860px;
+  }
+}
+
+.signup__card {
+  align-items: center;
+  min-height: 300px;
+  margin-top: 50px;
+  position: relative;
+
+  @media (min-width: 500px) {
+    h2 {
+      font-size: 1.4rem;
+    }
+    .h1-frontpage {
+      font-size: 1.8rem;
+    }
+
+    .container__btn-signup {
+      margin: 10px 0 0 50px;
+    }
+  }
+
+  @media (min-width: 850px) {
+    h2 {
+      font-size: 1.6rem;
+    }
+    .h1-frontpage {
+      font-size: 2rem;
+    }
+
+    .container__btn-signup {
+      margin: 40px 0 0 240px;
+    }
+  }
+}
+
+.container__btn-signup {
+  position: absolute;
+  margin: 10px 0 0 10px;
+  .btn-signup {
+    padding: 10px 80px;
+  }
+}
+
+.img-width {
+  height: 250px;
+}
+
+h5 {
+  color: black;
+}
+
+.h3-weekly {
+  text-align: center;
+  margin-top: 50px;
+}

@@ -1,0 +1,30 @@
+footer {
+  flex-shrink: 0;
+  background: $primary;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  .footer__links {
+    display: flex;
+    align-items: center;
+
+    a,
+    i {
+      margin: 3px;
+    }
+  }
+
+  .media-links {
+    font-size: 1.5rem;
+  }
+
+  .media-links i:hover {
+    font-size: 1.6rem;
+  }
+
+  a {
+    color: white;
+  }
+}
