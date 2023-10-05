@@ -1,9 +1,9 @@
 import showMessage from "./components/showMessage.js";
 import { createNav } from "./components/createNav.js";
 import { createFooter } from "./components/createFooter.js";
-import { baseUrl } from "./data/baseUrl.js";
-import { searchPosts } from "./components/posts/searchPosts.js";
+import { baseUrl } from "./components/constants/baseUrl.js";
 import { createPosts } from "./components/posts/createPosts.js";
+import { searchPosts } from "./components/posts/searchPosts.js";
 
 createNav();
 createFooter();
@@ -17,11 +17,15 @@ async function displayPosts() {
 
     console.log(json);
 
-    searchPosts(json);
-    createPosts(json);
+    const data = json && json.data ? json.data : [];
+
+    console.log(data);
+
+    searchPosts(data);
+    createPosts(data);
   } catch (error) {
     console.log(error);
-    showMessage("warning", "Ops! There is a problem with the API", ".message-container");
+    showMessage("warning", "Ops! There is a problem with retrieving data from the API", ".message-container");
   }
 }
 displayPosts();

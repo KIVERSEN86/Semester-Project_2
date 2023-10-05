@@ -10799,8 +10799,17 @@ a {
   text-decoration: none;
 }
 
+.nav-link:hover,
+a:hover {
+  color: white;
+}
+
 textarea {
   height: 200px;
+}
+
+.message-container {
+  margin: 10px;
 }
 
 .loader {
@@ -10811,7 +10820,7 @@ textarea {
   height: 110px;
   margin: auto;
   margin-top: 50px;
-  animation: spin 1s linear infinite alternate;
+  animation: spin 1.4s linear infinite alternate;
 }
 
 @keyframes spin {
@@ -10826,9 +10835,30 @@ textarea {
   font-size: 2em;
 }
 
-.nav-link:hover,
-.footer__links-a:hover {
-  color: #d5a947;
+nav a,
+footer a {
+  position: relative;
+}
+
+nav a::before,
+footer a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #d5a947;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-item a:hover::before,
+footer a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 .media-links i {
@@ -10865,7 +10895,7 @@ textarea {
 }
 
 .nav-active {
-  color: #d5a947;
+  color: black;
 }
 
 .nav__btn-container {
@@ -10916,21 +10946,7 @@ footer .footer__links i {
 footer .media-links {
   font-size: 1.5rem;
 }
-footer .media-links i:hover {
-  font-size: 1.6rem;
-}
 footer a {
-  color: white;
-}
-
-.logout-btn {
-  background: #d5a947;
-  color: white;
-  border-radius: 10px;
-}
-.logout-btn:hover {
-  background: #be902b;
-  border: 1.5px solid white;
   color: white;
 }
 
@@ -10948,6 +10964,19 @@ footer a {
 
 .btn-danger {
   margin-top: 10px;
+}
+
+.nav-btn {
+  margin: 0;
+}
+@media (min-width: 1200px) {
+  .nav-btn {
+    margin: 5px;
+  }
+}
+
+.logout-btn {
+  margin-left: 5px;
 }
 
 .edit-form {
@@ -11074,6 +11103,12 @@ h5, .h5 {
 
 .card__post {
   min-height: 140px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 
 .details__container {

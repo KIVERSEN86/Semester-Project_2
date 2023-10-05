@@ -32,8 +32,17 @@ a {
   text-decoration: none;
 }
 
+.nav-link:hover,
+a:hover {
+  color: white;
+}
+
 textarea {
   height: 200px;
+}
+
+.message-container {
+  margin: 10px;
 }
 
 .loader {
@@ -44,7 +53,7 @@ textarea {
   height: 110px;
   margin: auto;
   margin-top: 50px;
-  animation: spin 1s linear infinite alternate;
+  animation: spin 1.4s linear infinite alternate;
 }
 
 @keyframes spin {
@@ -60,9 +69,30 @@ textarea {
   font-size: 2em;
 }
 
-.nav-link:hover,
-.footer__links-a:hover {
-  color: #d5a947;
+nav a,
+footer a {
+  position: relative;
+}
+
+nav a::before,
+footer a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #d5a947;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-item a:hover::before,
+footer a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 .media-links i {

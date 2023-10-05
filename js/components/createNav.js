@@ -6,12 +6,12 @@ export function createNav() {
 
   const username = getUserName();
 
-  let authLink = ` <a class="btn btn-cta btn-cta_hover" href="login.html" type="submit">Login</button></a>`;
+  let authLink = ` <a class="btn btn-cta nav-btn" href="login.html" type="submit">Login</button></a>`;
 
   if (username) {
     authLink = `
-                <a class="btn btn-cta btn-cta_hover ${pathname === "/addPost.html" ? "" : ""}" href="addPost.html" type="submit">Add post</button></a>
-                <button class="logout-btn btn btn-cta_hover">Logout ${username}</button>`;
+                <a class="btn btn-cta ${pathname === "/addPost.html" ? "" : ""}" href="add-post.html" type="submit">Add post</button></a>
+                <button class="logout-btn btn btn-cta">Logout ${username}</button>`;
   }
 
   const container = document.querySelector(".container__nav");
@@ -34,11 +34,8 @@ export function createNav() {
                 <a class="nav-link ${pathname === "/about.html" ? "nav-active" : ""}" href="about.html">About</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2 search-posts" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-cta btn-cta_hover" type="submit">Search</button>
-            </form>
             <div class="nav__btn-container">
+            <a class="btn btn-cta nav-btn" href="/" type="submit">Sign up</button></a>
             ${authLink}
             </div>
             </div>

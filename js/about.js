@@ -1,4 +1,4 @@
-import { baseUrl } from "./data/baseUrl.js";
+import { baseUrl } from "./components/constants/baseUrl.js";
 import showMessage from "./components/showMessage.js";
 import { createNav } from "./components/createNav.js";
 import { createFooter } from "./components/createFooter.js";
@@ -30,6 +30,6 @@ const url = baseUrl + "abouts" + "?populate=image";
     }
   } catch (error) {
     console.log(error);
-    showMessage("warning", "Ops! There is a problem with the API", ".message-container");
+    showMessage("warning", "Ops! There is a problem with retrieving data from the API", ".message-container");
   }
 })();

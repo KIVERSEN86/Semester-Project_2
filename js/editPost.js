@@ -1,4 +1,4 @@
-import { baseUrl } from "./data/baseUrl.js";
+import { baseUrl } from "./components/constants/baseUrl.js";
 import showMessage from "./components/showMessage.js";
 import { getToken } from "./utils/localStorage.js";
 import { createFooter } from "./components/createFooter.js";
@@ -50,7 +50,7 @@ const message = document.querySelector(".message-container");
 
 form.addEventListener("submit", editForm);
 
-function editForm() {
+function editForm(event) {
   event.preventDefault();
 
   message.innerHTML = "";

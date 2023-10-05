@@ -1,4 +1,4 @@
-import { baseUrl } from "../../data/baseUrl.js";
+import { baseUrl } from "../constants/baseUrl.js";
 import { getToken } from "../../utils/localStorage.js";
 
 export default function deletePosts(id) {

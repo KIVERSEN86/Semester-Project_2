@@ -1,7 +1,7 @@
 import showMessage from "./components/showMessage.js";
 import { saveToken } from "./utils/localStorage.js";
 import { saveTheUser } from "./utils/localStorage.js";
-import { baseUrl } from "./data/baseUrl.js";
+import { baseUrl } from "./components/constants/baseUrl.js";
 import { createNav } from "./components/createNav.js";
 import { createFooter } from "./components/createFooter.js";
 
@@ -67,6 +67,10 @@ async function validLogin(email, password) {
 
   const data = JSON.stringify({ identifier: email, password: password });
 
+  if (!email || !password) {
+    return "Email or password cannot be blank";
+  }
+
   const options = {
     method: "POST",
     body: data,
@@ -95,6 +99,6 @@ async function validLogin(email, password) {
     }
   } catch (error) {
     console.log(error);
-    showMessage("warning", "Ops! There is a problem with the API", ".message-container");
+    showMessage("warning", "Ops! There is a problem with retrieving data from the API", ".message-container");
   }
 }

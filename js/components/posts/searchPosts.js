@@ -1,12 +1,13 @@
 import { createPosts } from "./createPosts.js";
 
-export function searchPosts(json) {
+export function searchPosts(data) {
   const search = document.querySelector(".search-posts");
 
-  search.onkeyup = function () {
+  search.onkeyup = function (event) {
     const searchValue = event.target.value.trim().toLowerCase();
-    const filteredPosts = json.data.filter(function (json) {
-      if (json.attributes.title.toLowerCase().startsWith(searchValue)) {
+
+    const filteredPosts = data.filter(function (post) {
+      if (post.attributes.title.toLowerCase().startsWith(searchValue)) {
         return true;
       }
     });

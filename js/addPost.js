@@ -1,7 +1,7 @@
 import showMessage from "./components/showMessage.js";
 import { createNav } from "./components/createNav.js";
 import { createFooter } from "./components/createFooter.js";
-import { baseUrl } from "./data/baseUrl.js";
+import { baseUrl } from "./components/constants/baseUrl.js";
 import { getToken } from "./utils/localStorage.js";
 
 const token = getToken();
