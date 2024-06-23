@@ -1,7 +1,5 @@
 # Semester-Project_2
 
-A simple overview of the use/purpose of the project.
-
 ## Description
 
 My semester project assignment was to create a wiki-style
