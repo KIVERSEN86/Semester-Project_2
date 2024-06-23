@@ -38,7 +38,7 @@ git clone https://github.com/KIVERSEN86/Semester-Project_2.git
 
 ## Contributing
 
-If you want to contribute to the project, you need to make sure to open a pull request so the code can be reviewd before it is merged with the main branch
+If you want to contribute to the project, you need to make sure to open a pull request so the code can be reviewed before it is merged with the main branch
 
 ## Contact
 
